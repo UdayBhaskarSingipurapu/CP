@@ -1,0 +1,21 @@
+# Ignore C++ compiled files
+*.exe
+*.out
+*.obj
+*.o
+*.a
+*.so
+*.dll
+
+# Ignore build directories
+/build/
+/bin/
+/debug/
+/release/
+
+# Ignore temporary/editor files
+*.log
+*.tmp
+*.swp
+*.vscode/
+*.idea/
