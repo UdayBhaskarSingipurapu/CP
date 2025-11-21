@@ -6,6 +6,7 @@
 *.a
 *.so
 *.dll
+*.class
 
 # Ignore build directories
 /build/
