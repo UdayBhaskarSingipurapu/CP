@@ -18,18 +18,18 @@ class Solution {
         }
         return dp[0][0];
     }
-    // private int backtrack(String s, String t, int i, int j, Integer[][] dp){
-    //     if(i == s.length() || j == t.length()) return 0;
+    private int backtrack(String s, String t, int i, int j, Integer[][] dp){
+        if(i == s.length() || j == t.length()) return 0;
 
-    //     if(dp[i][j] != null) return dp[i][j];
+        if(dp[i][j] != null) return dp[i][j];
 
-    //     int pick = 0;
-    //     if(s.charAt(i) == t.charAt(j)){
-    //         pick = 1 + backtrack(s, t, i + 1, j + 1, dp);
-    //     }
-    //     int notp = Math.max(backtrack(s, t, i + 1, j, dp) , backtrack(s, t, i, j + 1, dp));
+        int pick = 0;
+        if(s.charAt(i) == t.charAt(j)){
+            pick = 1 + backtrack(s, t, i + 1, j + 1, dp);
+        }
+        int notp = Math.max(backtrack(s, t, i + 1, j, dp) , backtrack(s, t, i, j + 1, dp));
 
-    //     dp[i][j] = Math.max(pick, notp);
-    //     return dp[i][j];
-    // }
+        dp[i][j] = Math.max(pick, notp);
+        return dp[i][j];
+    }
 }
