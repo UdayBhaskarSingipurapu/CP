@@ -23,4 +23,4 @@ int main(){
     vector<int> subs(n + 1, 0);
     dfs(graph, 1, 0, subs);
     for(int i = 1; i <= n; i++) cout<<subs[i]<<" ";
-}\
+}
