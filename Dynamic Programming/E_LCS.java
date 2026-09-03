@@ -1,11 +1,9 @@
-#include<bits/stdc++.h>
-using namespace std;
 
-class Solution {
+class E_LCS {
     public int longestCommonSubsequence(String text1, String text2) {
         int n = text1.length(), m = text2.length();
-        int[][] dp = new int[n + 1][m + 1];
-        // return backtrack(text1, text2, 0, 0, dp);
+        Integer[][] dp = new Integer[n + 1][m + 1];
+        int ans = backtrack(text1, text2, 0, 0, dp);
         for(int i = n - 1; i >= 0; i--){
             for(int j = m - 1; j >= 0; j--){
                 if(text1.charAt(i) == text2.charAt(j)){
